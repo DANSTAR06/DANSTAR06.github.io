@@ -22,9 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        //Recipients
-        $mail->setFrom('danwamuyu06@gmail.com', 'DANSTAR');
-        $mail->addAddress('danwamuyu06@gmail.com', 'Dan Wamuyu');
+
+         //Recipients
+        $mail->setFrom('danstar.github.io', 'website');
+
+        $mail->addAddress('danwamuyu06@gmail.com', 'Danstar');
+         //Add a recipient
+
+    //$mail->addAddress('ellen@example.com');               //Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+
+   // $mail->addCC('cc@example.com');
+    //$mail->addBCC('bcc@example.com');
 
         // Content
         $mail->isHTML(false);
