@@ -1232,43 +1232,39 @@
       -->
 
       <article class="contact" data-page="contact">
-
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
+      
         <section class="mapbox" data-mapbox>
           <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1214606.466538413!2d36.20850057655186!3d-0.4761267745640137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178821590baf3dd7%3A0x2dfb5ea9cbd6038b!2sKenya%20Methodist%20University-Meru%20Campus!5e0!3m2!1sen!2ske!4v1683751991959!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              width="400" height="300" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1214606.466538413!2d36.20850057655186!3d-0.4761267745640137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178821590baf3dd7%3A0x2dfb5ea9cbd6038b!2sKenya%20Methodist%20University-Meru%20Campus!5e0!3m2!1sen!2ske!4v1683751991959!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
-
+      
         <section class="contact-form">
-
           <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
+      
+          <form action="#" class="form" id="contactForm"> <!-- added id="contactForm" -->
+      
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Full name" required>
+      
+              <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required>
             </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
+      
+            <textarea id="message" name="message" class="form-input" placeholder="Your Message" required></textarea>
+      
+            <button class="form-btn" type="submit" id="sendMessageBtn" disabled>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
+      
           </form>
-
+      
         </section>
-
-      </article>
+      
+      </article>      
 
     </div>
 
