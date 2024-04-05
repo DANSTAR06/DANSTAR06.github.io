@@ -116,9 +116,9 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 // contact form variables
-const form = document.querySelector("[data-form]");
+/*const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formBtn = document.querySelector("[data-form-btn]");*/
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -156,18 +156,34 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // You can customize the email subject and body here
-    const subject = `New Message from ${fullName}`;
-    const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
+    // Create an object with the form data
+    const formData = {
+      fullname: fullName,
+      email: email,
+      message: message
+    };
 
-    // Create a mailto link
-    const mailtoLink = `mailto:danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Open the mailto link in a new tab
-    window.open(mailtoLink, '_blank');
-
-    // Optionally, you can reset the form after sending
-    form.reset();
+    // Send the form data to the server
+    fetch('send_mail.php', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('Message sent successfully!');
+        form.reset(); // Reset the form
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again later.');
+    });
   });
 
   // Enable/disable the send button based on form validation
@@ -180,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function () {
   emailInput.addEventListener('input', validateForm);
   messageInput.addEventListener('input', validateForm);
 });
-
 
 
 // page navigation variables
