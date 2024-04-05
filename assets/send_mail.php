@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
          //Recipients
-        $mail->setFrom('danstar.github.io', 'website');
+        $mail->setFrom('danwamuyu06@gmail.com', 'Danstar');
 
-        $mail->addAddress('danwamuyu06@gmail.com', 'Danstar');
+        $mail->addAddress('danwamuyu06@gmail.com');
          //Add a recipient
 
     //$mail->addAddress('ellen@example.com');               //Name is optional
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$mail->addBCC('bcc@example.com');
 
         // Content
-        $mail->isHTML(false);
+        $mail->isHTML(true);
         $mail->Subject = 'New Message from ' . $name;
         $mail->Body    = "Name: $name\nEmail: $email\nMessage: $message";
 
