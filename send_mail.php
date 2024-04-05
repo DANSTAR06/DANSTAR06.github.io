@@ -22,8 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
+        // Debugging - Enable verbose debug output
+        $mail->SMTPDebug = 2;
+        $mail->Debugoutput = 'html';
+
         //Recipients
-        $mail->setFrom('deejeydanstar@gmail.com', 'DJ DANSTAR');
+        $mail->setFrom('danwamuyu06@gmail.com', 'DANIEL WAMUYU');
         $mail->addAddress('deejeydanstar@gmail.com', 'DJ DANSTAR');
 
         // Content
@@ -34,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
         echo json_encode(array('success' => true));
     } catch (Exception $e) {
-        error_log('Message: ' . $e->getMessage()); // Log detailed error message
+        error_log('Error: ' . $e->getMessage()); // Log detailed error message
         echo json_encode(array('success' => false, 'message' => 'An error occurred while sending the email.'));
     }
 } else {
