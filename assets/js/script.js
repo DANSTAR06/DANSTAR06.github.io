@@ -179,14 +179,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Create an object with the form data
-    const formData = {
-      fullname: fullName,
-      email: email,
-      message: message
-    };
-
+    //const formData = {
+     // fullname: fullName,
+      //email: email,
+      //message: message
+   // };
+   const subject = 'New message from ${fullName}';
+   const body = 'Name: \t${fullName}\n Email:\t {email}\n Message:\t${message}';
+   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
+//open mailto link in new tab
+window.open(mailtoLink, '_blank');
+form.reset();
+  });
+   
     // Send the form data to the server
-    fetch('send_mail.php', {
+    /*fetch('send_mail.php', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
@@ -207,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('An error occurred. do try again later.');
     });
   });
-
+*/
   // Enable/disable the send button based on form validation
   function validateForm() {
     const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
@@ -218,5 +225,4 @@ document.addEventListener('DOMContentLoaded', function () {
   emailInput.addEventListener('input', validateForm);
   messageInput.addEventListener('input', validateForm);
 });
-
 
