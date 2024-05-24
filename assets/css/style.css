@@ -197,7 +197,6 @@ body { background: var(--smoky-black); }
   margin: 0 10px;
 }
 .backtoTop{
-  text-align: right;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -205,7 +204,7 @@ body { background: var(--smoky-black); }
   background-color: #007BFF;
   color: wheat;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 14px;
 }
