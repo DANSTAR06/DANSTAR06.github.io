@@ -1887,8 +1887,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 0 15px;
     text-decoration: none;
     color: #333;  
-  }.footer a{
-    color: #007BFF;}
+  }.footer a :hover{
+    color: #007BFF;
+  }
     .footer .social-icons{
       margin-top: 10px;
     }
