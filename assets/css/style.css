@@ -164,26 +164,38 @@ body { background: var(--smoky-black); }
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-.footer{
+.footer {
   background-color: #aca6a6;
   padding: 25px;
   text-align: center;
-  margin-bottom: 25px;   
-}.footer a{
-  margin: 0 5px;
+  margin-bottom: 25px;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer a {
   text-decoration: none;
-  color: #13ec0c;  
-}.footer a :hover{
+  color: #13ec0c;
+}
+
+.footer a:hover {
   color: #007BFF;
 }
-  .footer .social-icons{
-    margin-top: 10px;
-  }
-  .footer .social-icons a{
-    font-size: 24px;
-    margin: 0 10px;
-  }
 
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  font-size: 24px;
+  margin: 0 10px;
+}
 
 .sidebar,
 article {
