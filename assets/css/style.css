@@ -1880,13 +1880,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
   .footer{
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;   
+    background-color: #333131;
+    padding: 5px;
+    text-align: left;   
   }.footer a{
-    margin: 0 15px;
+    margin: 0 5px;
     text-decoration: none;
-    color: #333;  
+    color: #ec0c0c;  
   }.footer a :hover{
     color: #007BFF;
   }
