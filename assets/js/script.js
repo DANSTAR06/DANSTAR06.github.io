@@ -156,6 +156,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+//Scroll to contact form script -->
+
+  document.getElementById('email-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    document.querySelector('[data-page="contact"]').scrollIntoView({
+      behavior: 'smooth' // Smooth scroll
+    });
+  });
 
 //sending email from Contact form
 
