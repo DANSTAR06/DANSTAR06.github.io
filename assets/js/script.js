@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
    // };
    const subject = 'New message from ${fullName}';
    const body = 'Name: \t${fullName}\n Email:\t {email}\n Message:\t${message}';
-   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
+   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${subject}?&body=${body}'
 //open mailto link in new tab
 window.open(mailtoLink, '_blank');
 form.reset();
