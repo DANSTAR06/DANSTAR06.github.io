@@ -196,6 +196,22 @@ body { background: var(--smoky-black); }
   font-size: 24px;
   margin: 0 10px;
 }
+.backtoTop{
+  text-align: right;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007BFF;
+  color: wheat;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.backtoTop :hover{
+  background-color: #b30009;
+}
 
 .sidebar,
 article {

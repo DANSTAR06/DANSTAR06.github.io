@@ -158,12 +158,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 //Scroll to contact form script -->
 
-  document.getElementById('email-link').addEventListener('click', function(event) {
+window.onscroll= function(){scrollFunction()};
+
+function scrollFunction(){
+  if(document.body.scrollTop >100 || document.documentElement.scrollTop > 100){
+    document.getElementById("back-to-top").style.display = "block";
+  }
+    else{
+      document.getElementById("back-to-top").style.display = "none";
+    }
+  }
+  document.getElementById('back-to-top').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default anchor behavior
-    document.querySelector('[data-page="contact"]').scrollIntoView({
-      behavior: 'smooth' // Smooth scroll
+    window.scrollTo({top: 0, behavior: 'smooth'});
+   // document.querySelector('[data-page="contact"]').scrollIntoView({
+     // behavior: 'smooth' // Smooth scroll
     });
-  });
 
 //sending email from Contact form
 
@@ -193,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
       //message: message
    // };
    const subject = 'New message from ${fullName}';
-   const body = 'Name: \t${fullName}\n Email:\t {email}\n Message:\t${message}';
-   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${subject}?&body=${body}'
+   const body = 'Name: ${fullName}\nEmail: {email}\nMessage: ${message}';
+   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
 //open mailto link in new tab
 window.open(mailtoLink, '_blank');
 form.reset();
@@ -225,7 +235,7 @@ form.reset();
 */
   // Enable/disable the send button based on form validation
   function validateForm() {
-    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.toLowerCase.trim() !== '' && messageInput.value.trim() !== '';
     sendButton.disabled = !isValid;
   }
 
