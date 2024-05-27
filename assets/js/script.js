@@ -155,9 +155,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const fullNameInput = document.getElementById('fullname');
@@ -177,19 +174,22 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    const subject = `New message from ${fullName}`;
-    const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto:danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const templateParams = {
+      fullname: fullName,
+      email: email,
+      message: message
+    };
 
-    // Open mailto link
-    window.location.href = mailtoLink;
-    
-    // Optional: reset the form after a slight delay to ensure the mailto link has been processed
-    setTimeout(() => {
-      form.reset();
-      sendButton.disabled = true; // Disable button after submitting
-    }, 1000);
+    emailjs.send('@danstar06', 'template_lem9m88', templateParams)
+      .then(function(response) {
+         alert('SUCCESS!', response.status, response.text);
+         form.reset();
+         sendButton.disabled = true;
+      }, function(error) {
+         alert('FAILED...', error);
+      });
   });
+
   // Enable/disable the send button based on form validation
   function validateForm() {
     const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
@@ -200,6 +200,52 @@ document.addEventListener('DOMContentLoaded', function () {
   emailInput.addEventListener('input', validateForm);
   messageInput.addEventListener('input', validateForm);
 });
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const form = document.getElementById('contactForm');
+//   const fullNameInput = document.getElementById('fullname');
+//   const emailInput = document.getElementById('email');
+//   const messageInput = document.getElementById('message');
+//   const sendButton = document.getElementById('sendMessageBtn');
+
+//   form.addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent form from submitting
+
+//     const fullName = fullNameInput.value.trim();
+//     const email = emailInput.value.toLowerCase().trim();
+//     const message = messageInput.value.trim();
+
+//     if (!fullName || !email || !message) {
+//       alert('Please fill in all fields');
+//       return;
+//     }
+
+//     const subject = `New message from ${fullName}`;
+//     const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
+//     const mailtoLink = `mailto:danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+//     // Open mailto link
+//     window.location.href = mailtoLink;
+    
+//     // Optional: reset the form after a slight delay to ensure the mailto link has been processed
+//     setTimeout(() => {
+//       form.reset();
+//       sendButton.disabled = true; // Disable button after submitting
+//     }, 1000);
+//   });
+//   // Enable/disable the send button based on form validation
+//   function validateForm() {
+//     const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+//     sendButton.disabled = !isValid;
+//   }
+
+//   fullNameInput.addEventListener('input', validateForm);
+//   emailInput.addEventListener('input', validateForm);
+//   messageInput.addEventListener('input', validateForm);
+// });
 
 
 
