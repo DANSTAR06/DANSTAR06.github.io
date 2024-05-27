@@ -204,35 +204,12 @@ document.addEventListener('DOMContentLoaded', function () {
    // };
    const subject = 'New message from ${fullName}';
    const body = 'Name: ${fullName}\nEmail: {email}\nMessage: ${message}';
+   //create mail link
    const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
 //open mailto link in new tab
 window.open(mailtoLink, '_blank');
 form.reset();
   });
-   
-    // Send the form data to the server
-    /*fetch('send_mail.php', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        alert('Message sent successfully!');
-        form.reset(); // Reset the form
-      } else {
-        alert('Failed to send message. Please try again later.');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('An error occurred. do try again later.');
-    });
-  });
-*/
   // Enable/disable the send button based on form validation
   function validateForm() {
     const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
