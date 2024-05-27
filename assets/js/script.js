@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
     emailjs.send('@danstar06', 'template_lem9m88', templateParams)
       .then(function(response) {
         // Show success message
-        formMessage.textContent = 'Your message has been sent successfully!';
+        formMessage.textContent = 'Your message has been delivered successfully!';
         formMessage.style.color = 'green';
          //alert('SUCCESS! Your message has been sent successfully!', response.status, response.text);
          form.reset();
