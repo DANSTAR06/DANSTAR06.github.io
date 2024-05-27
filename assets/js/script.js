@@ -195,15 +195,22 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    const subject = `New message from ${fullName}`;
-    const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  //   const subject = `New message from ${fullName}`;
+  //   const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
+  //   const mailtoLink = `mailto:danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open mailto link in new tab
-    //window.open(mailtoLink, '_self');
-    window.location.href = mailtoLink;
-   // form.reset();
-    //sendButton.disabled = true; // Disable button after submitting
+  //   // Open mailto link in new tab
+  //   //window.open(mailtoLink, '_self');
+  //   window.location.href = mailtoLink;
+  //  // form.reset();
+  //   //sendButton.disabled = true; // Disable button after submitting
+  // });
+  const subject = 'New message from ${fullName}';
+   const body = 'Name: \t${fullName}\n Email:\t {email}\n Message:\t${message}';
+   const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
+//open mailto link in new tab
+window.open(mailtoLink, '_blank');
+form.reset();
   });
 
   // Enable/disable the send button based on form validation
