@@ -197,16 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
   messageInput.addEventListener('input', validateForm);
 });
 
-  // Enable/disable the send button based on form validation
-  function validateForm() {
-    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
-    sendButton.disabled = !isValid;
-  }
-
-  fullNameInput.addEventListener('input', validateForm);
-  emailInput.addEventListener('input', validateForm);
-  messageInput.addEventListener('input', validateForm);
-});
 
 
 //Scroll to top form script -->
