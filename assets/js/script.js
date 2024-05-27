@@ -157,6 +157,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contactForm');
   const fullNameInput = document.getElementById('fullname');
@@ -182,10 +183,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Open mailto link
     window.location.href = mailtoLink;
-    form.reset();
-    //sendButton.disabled = true; // Disable button after submitting
+    
+    // Optional: reset the form after a slight delay to ensure the mailto link has been processed
+    setTimeout(() => {
+      form.reset();
+      sendButton.disabled = true; // Disable button after submitting
+    }, 1000);
   });
-
   // Enable/disable the send button based on form validation
   function validateForm() {
     const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
