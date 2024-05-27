@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault(); // Prevent form from submitting
 
     const fullName = fullNameInput.value.trim();
-    const email = emailInput.value.toLowerCase().trim();
+    const email = emailInput.value.trim();
     const message = messageInput.value.trim();
 
     if (!fullName || !email || !message) {
@@ -197,17 +197,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const subject = `New message from ${fullName}`;
     const body = `Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
-    const mailtoLink = `mailto:danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     // Open mailto link in new tab
-    window.open(mailtoLink, '_blank');
-    form.reset();
-    sendButton.disabled = true; // Disable button after submitting
+    window.open(mailtoLink, '_self');
+   // form.reset();
+    //sendButton.disabled = true; // Disable button after submitting
   });
 
   // Enable/disable the send button based on form validation
   function validateForm() {
-    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.toLowerCase.trim() !== '' && messageInput.value.trim() !== '';
+    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
     sendButton.disabled = !isValid;
   }
 
