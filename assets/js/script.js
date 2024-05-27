@@ -235,7 +235,7 @@ form.reset();
 */
   // Enable/disable the send button based on form validation
   function validateForm() {
-    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.toLowerCase.trim() !== '' && messageInput.value.trim() !== '';
+    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
     sendButton.disabled = !isValid;
   }
 
