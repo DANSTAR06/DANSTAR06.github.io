@@ -200,7 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const mailtoLink = `mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     // Open mailto link in new tab
-    window.open(mailtoLink, '_self');
+    //window.open(mailtoLink, '_self');
+    window.location.href = mailtoLink;
    // form.reset();
     //sendButton.disabled = true; // Disable button after submitting
   });
