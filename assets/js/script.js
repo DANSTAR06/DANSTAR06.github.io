@@ -182,12 +182,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     emailjs.send('@danstar06', 'template_lem9m88', templateParams)
       .then(function(response) {
-         alert('SUCCESS!', response.status, response.text);
+        // Show success message
+        formMessage.textContent = 'Your message has been sent successfully!';
+        formMessage.style.color = 'green';
+         //alert('SUCCESS! Your message has been sent successfully!', response.status, response.text);
          form.reset();
          sendButton.disabled = true;
+     
+          // Send the autoreply email
+          const autoreplyParams = {
+            fullname: fullName,
+            email: email
+          };
+          emailjs.send('@danstar06', 'template_swx8ned', autoreplyParams)
+           .catch(function(error) {
+             // Log the autoreply error silently
+             console.error('Failed to send autoreply...', error);
+           });
       }, function(error) {
-         alert('FAILED...', error);
+         // Show error message
+         //alert('There was an error sending your message. Please try again.');
+         formMessage.textContent = 'There was an error sending your message. Please try again.';
+         formMessage.style.color = 'red';
       });
+ 
   });
 
   // Enable/disable the send button based on form validation

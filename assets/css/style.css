@@ -164,6 +164,11 @@ body { background: var(--smoky-black); }
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.form-message {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
 .footer {
   background-color: #fcc246;
   padding: 25px;
