@@ -196,23 +196,19 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Create an object with the form data
-    //const formData = {
-     // fullname: fullName,
-      //email: email,
-      //message: message
-   // };
    const subject = 'New message from ${fullName}';
-   const body = 'Name: ${fullName}\nEmail: {email}\nMessage: ${message}';
+   const body = 'Name: ${fullName}\nEmail: ${email}\nMessage: ${message}';
    //create mail link
    const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
 //open mailto link in new tab
 window.open(mailtoLink, '_blank');
 form.reset();
+
+sendButton.disabled = true; // Disable button after submitting
   });
   // Enable/disable the send button based on form validation
   function validateForm() {
-    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+    const isValid = fullNameInput.value.trim() !== '' && emailInput.value.toLowerCase.trim() !== '' && messageInput.value.trim() !== '';
     sendButton.disabled = !isValid;
   }
 
