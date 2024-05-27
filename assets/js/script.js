@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //   //sendButton.disabled = true; // Disable button after submitting
   // });
   const subject = 'New message from ${fullName}';
-   const body = 'Name: \t${fullName}\n Email:\t {email}\n Message:\t${message}';
+   const body = 'Name: ${fullName}\n Email: ${email}\n Message:${message}';
    const mailtoLink = 'mailto: danwamuyu06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}'
 //open mailto link in new tab
 window.open(mailtoLink, '_blank');
