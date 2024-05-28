@@ -79,6 +79,7 @@ if(isset($_POST['submit'])){
     'CallBackURL' => $CallBackURL,
     'AccountReference' => $AccountReference,
     'TransactionDesc' => $TransactionDesc
+
   );
 
   $data_string = json_encode($curl_post_data);
