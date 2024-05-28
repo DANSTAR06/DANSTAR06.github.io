@@ -189,17 +189,11 @@
         </ul>
 
       </nav> -->
-      <script>
-        function handlePayment(section) {
-            // Redirect to payment page with the section as a parameter
-            window.location.href = `index.php?section=${section}`;
-        }
-    </script>
 
       <div class="main-content">
         <nav class="navbar">
           <ul class="navbar-list">
-            <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+            <li class="navbar-item"><button class="navbar-link active" data-nav-link>Intro</button></li>
             <li class="navbar-item"><button class="navbar-link" data-nav-link onclick="handlePayment('resume')">Resume</button></li>
             <li class="navbar-item"><button class="navbar-link" data-nav-link onclick="handlePayment('portfolio')">Portfolio</button></li>
             <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
@@ -217,7 +211,7 @@
       <article class="about  active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About</h2>
+          <h2 class="h2 article-title">Intro</h2>
         </header>
 
         <section class="about-text">
@@ -1339,6 +1333,12 @@
     //emailjs.init("YOUR_USER_ID");
     emailjs.init("4WYelSSzt2DOZmZzY");
   })();
+</script>
+<script>
+  function handlePayment(section) {
+      // Redirect to payment page with the section as a parameter
+      window.location.href = `index.php?section=${section}`;
+  }
 </script>
 
   <!--
