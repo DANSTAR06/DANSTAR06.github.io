@@ -173,7 +173,8 @@ body { background: var(--smoky-black); }
   background-color: #fcc246;
   padding: 25px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .footer p {
