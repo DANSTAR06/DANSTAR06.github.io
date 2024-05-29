@@ -171,7 +171,7 @@ body { background: var(--smoky-black); }
 
 .footer {
   background-color: #f50606;
-  padding: 25px;
+  padding: 5px;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 8px;
@@ -196,12 +196,51 @@ body { background: var(--smoky-black); }
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .footer .social-icons a {
   font-size: 24px;
-  margin: 0 10px;
+  margin: 5px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  
+  .footer .social-icons {
+    margin-top: 15px;
+  }
+
+  .footer .social-icons a {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer .social-icons {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .footer .social-icons a {
+    margin: 10px 0;
+  }
+}
+
 .backtoTop{
   position: fixed;
   bottom: 20px;
