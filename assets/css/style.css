@@ -170,11 +170,11 @@ body { background: var(--smoky-black); }
 }
 
 .footer {
-  background-color: #fcc2468e;
-  padding: 25px;
+  background-color: #0c0a018e;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 8px;
 }
 
 .footer p {
@@ -208,7 +208,7 @@ body { background: var(--smoky-black); }
   right: 20px;
   display: none;
   background-color: #007BFF;
-  color: wheat;
+  color: #23e909;
   padding: 10px 20px;
   border-radius: 10px;
   text-decoration: none;
@@ -354,9 +354,9 @@ article.active {
 \*-----------------------------------*/
 
 main {
-  margin: 15px 12px;
+  margin: 15px 10px;
   margin-bottom: 75px;
-  min-width: 259px;
+  min-width: 260px;
 }
 
 
@@ -578,7 +578,7 @@ main {
 .service-item {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 20px;
+  padding: 25px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
@@ -1275,9 +1275,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
-
-
-
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1304,9 +1301,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: auto; }
 
 }
-
-
-
 
 
 /**
@@ -1593,9 +1587,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .form-btn ion-icon { font-size: 18px; }
 
 }
-
-
-
 
 
 /**
