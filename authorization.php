@@ -1,8 +1,8 @@
 <?php
 
-require 'vendor/autoload.php';
+//require 'vendor/autoload.php';
 
-use GuzzleHttp\Client;
+//use GuzzleHttp\Client;
 
 function getAccessToken($consumerKey, $consumerSecret) {
     $client = new Client();
