@@ -7,36 +7,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DANSTAR</title>
 
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="./assets/MPofolio/mecontactavatar.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Mobile-first responsive design */
+    @media screen and (max-width: 768px) {
+      body {
+        margin: 0;
+        padding: 10px;
+        overflow-x: hidden;
+      }
+      
+      main {
+        display: block !important;
+        width: 100% !important;
+      }
+      
+      .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        margin-bottom: 20px;
+        transform: none !important;
+      }
+      
+      .main-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
+      }
+      
+      .navbar {
+        width: 100% !important;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      
+      .navbar-list {
+        display: flex !important;
+        min-width: max-content;
+        padding: 0 10px;
+      }
+      
+      .navbar-item {
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+      
+      .service-list {
+        display: block !important;
+      }
+      
+      .service-item {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .project-list {
+        display: block !important;
+      }
+      
+      .project-item {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .filter-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      
+      .skills-list {
+        display: block !important;
+      }
+      
+      .skills-item {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+      }
+      
+      .testimonials-list {
+        display: block !important;
+      }
+      
+      .testimonials-item {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+      }
+      
+      .clients-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+      
+      .clients-item {
+        width: auto !important;
+        margin: 5px !important;
+      }
+      
+      .timeline-list {
+        padding-left: 20px !important;
+      }
+      
+      .contact-form {
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      
+      .input-wrapper {
+        display: block !important;
+      }
+      
+      .input-wrapper input {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+      }
+      
+      .form-input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      
+      .mapbox iframe {
+        width: 100% !important;
+        height: 200px !important;
+      }
+      
+      .footer {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 20px 10px !important;
+      }
+      
+      .social-icons {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+      }
+      
+      .article-title {
+        font-size: 24px !important;
+      }
+      
+      .h3 {
+        font-size: 18px !important;
+      }
+      
+      .h4 {
+        font-size: 16px !important;
+      }
+      
+      /* Ensure text doesn't overflow */
+      * {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      
+      /* Fix any fixed widths */
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      
+      table {
+        width: 100% !important;
+        overflow-x: auto !important;
+        display: block !important;
+        white-space: nowrap !important;
+      }
+    }
+    
+    /* Tablet adjustments */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .sidebar {
+        width: 300px !important;
+      }
+      
+      .main-content {
+        margin-left: 320px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
 
     <aside class="sidebar" data-sidebar>
 
@@ -153,19 +316,7 @@
 
     </aside>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
      <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
 
        <nav class="navbar">
 
@@ -190,20 +341,6 @@
 
       </nav> 
 
-      <!-- <div class="main-content">
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-            <li class="navbar-item"><button class="navbar-link" data-nav-link onclick="handlePayment('resume')">Resume</button></li>
-            <li class="navbar-item"><button class="navbar-link" data-nav-link onclick="handlePayment('portfolio')">Portfolio</button></li>
-            <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-          </ul>
-        </nav> -->
-
-      <!--
-        - #ABOUT
-      -->
-
       <article class="about  active" data-page="about">
 
         <header>
@@ -225,17 +362,11 @@
           </p>
         </section>
 
-
-        <!--
-          - service
-        -->
-
         <section class="service">
 
           <h3 class="h3 service-title">What I Offer</h3>
 
           <ul class="service-list">
-
 
             <li class="service-item">
 
@@ -285,9 +416,6 @@
                 </p>
               </div>
             </li>
-
-            
-
 
             <li class="service-item">
 
@@ -361,20 +489,14 @@
                 <h4 class="h4 service-item-title">Computer&Accessories Shop plus Online Cyber</h4>
 
                 <p class="service-item-text">
-                  <a href="https://awards.aakenya.co.ke/dct/">Visit my website for more Info.</a>
+                  <a href="https://danstarcybertech.kesug.com/dct/">Visit my website for more Info.</a>
                 </p>
               </div>
             </li>
 
-
           </ul>
 
         </section>
-
-
-        <!--
-          - testimonials
-        -->
 
         <section class="testimonials">
 
@@ -424,11 +546,6 @@
 
         </section>
 
-
-        <!--
-          - testimonials modal
-        -->
-
         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
@@ -466,11 +583,6 @@
           </section>
 
         </div>
-
-
-        <!--
-          - clients
-        -->
 
         <section class="clients">
 
@@ -520,14 +632,6 @@
 
       </article>
 
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
       <article class="resume" data-page="resume">
 
         <header>
@@ -546,8 +650,6 @@
 
           <ol class="timeline-list">
 
-
-
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Professional Certifications</h4>
@@ -561,8 +663,6 @@
               </p>
 
             </li>
-            
-            
 
             <li class="timeline-item">
 
@@ -576,9 +676,6 @@
               </p>
 
             </li>
-
-
-          
 
             <li class="timeline-item">
 
@@ -619,7 +716,6 @@
 
             </li>
 
-            
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Freelancer</h4>
@@ -729,7 +825,6 @@
 
             </li>
 
-
             <li class="skills-item">
 
               <div class="title-wrapper">
@@ -743,7 +838,6 @@
 
             </li>
 
-
              <li class="skills-item">
 
               <div class="title-wrapper">
@@ -756,8 +850,6 @@
               </div>
 
             </li>
-
-          
 
             <li class="skills-item">
 
@@ -842,19 +934,11 @@
 
       </article>
 
-
 <div class="alert alert-info" style="background-color:#ffffff;padding:5px;margin:5px;">
-  <a href="https://awards.aakenya.co.ke/dct/" target="_blank"><h2 style="color:#00644c;"><strong>Read More about Me and my accomplishments Here</strong></h2></a>
+  <a href="https://danstarcybertech.kesug.com/dct/" target="_blank"><h2 style="color:#00644c;"><strong>Read More about Me and my accomplishments Here</strong></h2></a>
 </div>
 
-
-      <!--
-        - #PORTFOLIO
-      -->
-
       <article class="portfolio" data-page="portfolio">
-
-        
 
         <header>
           <h2 class="h2 article-title">My Projects</h2>
@@ -867,10 +951,6 @@
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
-
-            <!--<li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>-->
 
             <li class="filter-item">
               <button data-filter-btn>Applications</button>
@@ -899,10 +979,6 @@
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
-             <!-- <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>-->
 
               <li class="select-item">
                 <button data-select-item>Applications</button>
@@ -1022,7 +1098,6 @@
               </a>
             </li>
             
-
             <li class="project-item  active" data-filter-item data-category="applications">
               <a href="#">
 
@@ -1059,7 +1134,6 @@
               </a>
             </li>
             
-
             <li class="project-item  active" data-filter-item data-category="Web development">
               <a href="#">
 
@@ -1077,7 +1151,6 @@
 
               </a>
             </li>
-
 
             <li class="project-item  active" data-filter-item data-category="web design">
               <a href="#">
@@ -1223,7 +1296,6 @@
               </a>
             </li>
 
-
             <li class="project-item  active" data-filter-item data-category="applications">
               <a href="aakenya.co.ke">
 
@@ -1246,206 +1318,6 @@
         </section>
 
       </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-<!--
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Feb 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Danstar cyberTech
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
--->
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
 
       <article class="contact" data-page="contact">
         <header>
@@ -1471,45 +1343,31 @@
               <span>Send Email</span>
             </button>
           </form>
-               <!-- Message Display -->
-  <div id="formMessage" class="form-message"></div>
+          <div id="formMessage" class="form-message"></div>
         </section>
         
       </article>      
 
     </div>
 
-
   </main>
  
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-    <!--
-    - emailjs link
-  -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
   (function(){
-    //emailjs.init("YOUR_USER_ID");
     emailjs.init("4WYelSSzt2DOZmZzY");
   })();
 </script>
 <script>
   function handlePayment(section) {
-      // Redirect to payment page with the section as a parameter
       window.location.href = `http://danstar.lovestoblog.com/?section=${section}`;
   }
 </script>
 
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<!--Footer Section-->
+
 <footer class="footer">
   <p>Direct Contacts</p>
   <div class="social-icons">
